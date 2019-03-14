@@ -1,0 +1,20 @@
+{
+  "name": "@iryu54/mysterypackage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "mysterypackage": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asar": "^1.0.0",
+    "bluebird": "^3.5.3",
+    "fs-extra": "^7.0.1"
+  }
+}

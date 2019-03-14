@@ -1,0 +1,3 @@
+# Mystery package
+
+This is a mystery package...
