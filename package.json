@@ -1,7 +1,7 @@
 {
   "name": "@iryu54/mysterypackage",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a mystery package...",
   "main": "index.js",
   "bin": {
     "mysterypackage": "./index.js"
@@ -16,5 +16,14 @@
     "asar": "^1.0.0",
     "bluebird": "^3.5.3",
     "fs-extra": "^7.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clabroche/mysterypackage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clabroche/mysterypackage/issues"
+  },
+  "homepage": "https://github.com/clabroche/mysterypackage#readme"
 }
