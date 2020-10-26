@@ -1,6 +1,6 @@
 {
   "name": "@iryu54/mysterypackage",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This is a mystery package...",
   "main": "index.js",
   "bin": {
