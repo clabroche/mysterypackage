@@ -35,7 +35,7 @@ async function replace() {
   let util = await fse.readFile(utilsPath3, 'utf-8')
   util = getBetween(util, 'leftdays:', ',', '1000')
   // util = getBetween(util, 'licensed:', ',', 'true')
-  util = getBetween(util, 'trialExpired:', ',', 'false')
+  // util = getBetween(util, 'trialExpired:', ',', 'false')
   util = getBetween(util, 'isCommercialLic:', 'LicenseType.personal,', 'true', ',')
   util = getBetween(util, 'isCommercialLic:', '\\)],', 'true', ',')
   util = getBetween(util, 'isPersonalLic:', 'LicenseType.personal,', 'true', ',')
@@ -65,6 +65,17 @@ async function replace() {
   let util5 = await fse.readFile(utilsPath5, 'utf-8')
   util5 += `;exports.cl= function() {console.log('cl');return true}`
   await fse.writeFile(utilsPath5, util5, 'utf-8')
+
+  const utilsPath6 = pathfs.resolve(destAsarPathUnpackDirectory, 'app.js')
+  let util6 = await fse.readFile(utilsPath6, 'utf-8')
+  util6 += `
+;(_ => {
+  setTimeout(() => {
+    utils_1.ez.messager.show({ msg: "<h3>Enjoy your licence ;)</h3><div>it seems that a mysterious package is there for something</div>" })
+    }, 100);
+})()`
+  await fse.writeFile(utilsPath6, util6, 'utf-8')
+
 }
 function getBetween(util, from, to, by, overrideTo) {
   const regex = new RegExp(from + '(.{1,400}?)' + to, 'gi')
